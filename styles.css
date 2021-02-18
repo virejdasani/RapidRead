@@ -26,6 +26,11 @@ body,
     font-size: xx-large;
 }
 
+#wpmLabel {
+    margin: 10px;
+    margin-top: 25px;
+}
+
 #startButton {
     background-color: #419e44;
     border: none;
