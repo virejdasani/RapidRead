@@ -1,7 +1,7 @@
 {
-  "name": "readkwik",
+  "name": "rapidread",
   "version": "1.0.0",
-  "description": "Read Kwiker with ReadKwik!",
+  "description": "Read quicker with RapidRead!",
   "main": "main.js",
   "scripts": {
     "start": "electron ."

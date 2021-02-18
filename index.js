@@ -4,7 +4,7 @@
 
 var startButton = document.getElementById("startButton")
 var textInput = document.getElementById("textInput")
-var kwikWords = document.getElementById("kwikWords")
+var rapidWords = document.getElementById("rapidWords")
 var wpmInput = document.getElementById("wpmInput")
 
 var textIndex
@@ -40,7 +40,7 @@ function filterText(text) {
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
-    // Call the arrayIterator function to show the words inside the kwikWords div
+    // Call the arrayIterator function to show the words inside the rapidWords div
     arrayIterator(wordsArray)
 }
 
@@ -56,9 +56,9 @@ function arrayIterator(wordsArray) {
 // This function takes the index from arrayIterator() and displays the word from wordsArray with that index (i)
 // It also delays the displaying of the words based upon the WPM selected
 function displayWords(i) {
-    // Anonymous function that sets the innerText of kwikWords to the word with current index with time delay of wpm
+    // Anonymous function that sets the innerText of rapidWords to the word with current index with time delay of wpm
     setTimeout(() => {
         console.log(wordsArray[i])
-        kwikWords.innerText = wordsArray[i]
+        rapidWords.innerText = wordsArray[i]
     }, wpm * i) // The '*i' is needed to get a pause between each word instead of a singular pause before the words. If that is removed, it will have a delay of 'wpm' and then the last word in the array will be visible due to no delay between words
 }
