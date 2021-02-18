@@ -7,6 +7,8 @@ body,
 
 #app {
     margin-top: 10%;
+    text-align: center;
+
 }
 
 #title {
@@ -14,24 +16,28 @@ body,
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.inputBox {
-    width: 80%;
-    padding: 5px;
-    margin-left: 10%;
-    margin-top: 5%;
-    text-align: center;
+#inputForm {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#kwikWords {
+    margin-top: 120px;
+    font-size: xx-large;
 }
 
 #startButton {
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: rgb(67, 175, 103);
+    background-color: #419e44;
     border: none;
-    border-radius: 7px;
-    display: flex;
+    color: white;
+    padding: 10px 32px;
     text-align: center;
-    font-size: larger;
-    margin-left: 46%;
+    font-size: 16px;
+    border-radius: 6px;
+    transition-duration: 0.4s;
     margin-top: 30px;
+}
+
+#startButton:hover {
+    background-color: #347c38;
 }

@@ -15,12 +15,38 @@
     <div id="app">
         <h1 id="title">ReadKwik</h1>
 
-        <form>
-            <input class="inputBox" id="textInput" type="text" placeholder="Enter text here" required="">
+        <form id="inputForm">
+
+            <!-- Text input -->
+            <!-- <input class="inputBox" id="textInput" type="text" placeholder="Enter text you want to ReadKwik here" required=""> -->
+            <textarea class="form-control" id="textInput" rows="3"></textarea>
+
+            <!-- WPM input options -->
+            <label id="wpmLabel" for="wpmInput">Select words per minute</label>
+            <select class="form-control" id="wpmInput">
+                <option>50</option>
+                <option>100</option>
+                <option>200</option>
+                <option>300</option>
+                <option>400</option>
+                <option>500</option>
+                <option>600</option>
+                <option>700</option>
+                <option>800</option>
+                <option>900</option>
+                <option>1000</option>
+            </select>
+
+            <!-- Empty div to get start button to next line -->
+            <div></div>
+
+            <!-- Start button -->
             <button id="startButton">Start</button>
+
         </form>
 
-        <div id="kwikWords"></div>
+        <!-- These words are rendered in via javascript -->
+        <h1 id="kwikWords"></h1>
 
     </div>
     <script src="index.js"></script>

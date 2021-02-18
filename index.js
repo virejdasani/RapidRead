@@ -1,14 +1,15 @@
-// TODO - add bootstrap input field (longer)
-// TODO - ad buttons for WPM speed
+// TODO
+// Research how many words per second to display for 200WPM, 400WPM reading speed etc.
+
 
 var startButton = document.getElementById("startButton")
 var textInput = document.getElementById("textInput")
 var kwikWords = document.getElementById("kwikWords")
+var wpmInput = document.getElementById("wpmInput")
 
 var textIndex
 var wordsArray
-// Words per minute
-var wpm = 1000
+var wpm
 
 startButton.addEventListener("click", function (event) {
     // To stop page refresh
@@ -20,17 +21,22 @@ startButton.addEventListener("click", function (event) {
     let text = textInput.value
     console.log(text)
 
+    // Get words per minute
+    wpm = wpmInput.value
+    console.log(wpm)
+
     // Filter the text
     filterText(text)
 })
 
 // This function takes the user inputted string and changes it into an array of words
 function filterText(text) {
-    // TODO
-    // Add a timer to display the words
-    // Research how many words per second to display for 200WPM, 400WPM reading speed etc.
+
+    // Replace new lines with spaces
+    text = text.replace(/\n/g, " ")
 
     // Here, separate each word into an array called wordsArray
+    // Words are separated by removing spaces and \n (new lines) and adding them into an array
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
@@ -54,5 +60,5 @@ function displayWords(i) {
     setTimeout(() => {
         console.log(wordsArray[i])
         kwikWords.innerText = wordsArray[i]
-    }, wpm*i) // The '*i' is needed to get a pause between each word instead of a singular pause before the words. If that is removed, it will have a delay of 'wpm' and then the last word in the array will be visible due to no delay between words
+    }, wpm * i) // The '*i' is needed to get a pause between each word instead of a singular pause before the words. If that is removed, it will have a delay of 'wpm' and then the last word in the array will be visible due to no delay between words
 }
