@@ -31,12 +31,15 @@ startButton.addEventListener("click", function (event) {
 
 // This function takes the user inputted string and changes it into an array of words
 function filterText(text) {
-
     // Replace new lines with spaces
     text = text.replace(/\n/g, " ")
+    // Replace double spaces with single spaces
+    text = text.replace("  ", " ")
+    // Replace triple spaces with single spaces
+    text = text.replace("   ", " ")
 
     // Here, separate each word into an array called wordsArray
-    // Words are separated by removing spaces and \n (new lines) and adding them into an array
+    // Words are separated by removing spaces and adding them into an array
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
