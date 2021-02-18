@@ -1,0 +1,37 @@
+html,
+body,
+#app {
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+
+#app {
+    margin-top: 10%;
+}
+
+#title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputBox {
+    width: 80%;
+    padding: 5px;
+    margin-left: 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#startButton {
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(67, 175, 103);
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    text-align: center;
+    font-size: larger;
+    margin-left: 46%;
+    margin-top: 30px;
+}
