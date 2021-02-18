@@ -1,4 +1,5 @@
 // TODO - add bootstrap input field (longer)
+// TODO - ad buttons for WPM speed
 
 var startButton = document.getElementById("startButton")
 var textInput = document.getElementById("textInput")
@@ -6,6 +7,8 @@ var kwikWords = document.getElementById("kwikWords")
 
 var textIndex
 var wordsArray
+// Words per minute
+var wpm = 1000
 
 startButton.addEventListener("click", function (event) {
     // To stop page refresh
@@ -31,24 +34,24 @@ function filterText(text) {
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
-    // Call the displayWords function to show the words inside the kwikWords div
-    displayWords(wordsArray)
+    // Call the arrayIterator function to show the words inside the kwikWords div
+    arrayIterator(wordsArray)
 }
 
-// 
-function displayWords(wordsArray) {
+// Function to iterate over the words in the array
+function arrayIterator(wordsArray) {
     // Iterating over all words in the wordsArray array
     for (let i = 0; i < wordsArray.length; i++) {
-
-        delay(i)
-        // console.log(wordsArray[i])
-        // Wait
+        // Delay the displaying of words by the wpm. This is done in the displayWords() function
+        displayWords(i)
     }
 }
 
-function delay(i) {
+// This function takes the index from arrayIterator() and displays the word from wordsArray with that index (i)
+// It also delays the displaying of the words based upon the WPM selected
+function displayWords(i) {
     setTimeout(() => {
         console.log(wordsArray[i])
         kwikWords.innerText = wordsArray[i]
-    }, 1000*i);
+    }, wpm*i);
 }
