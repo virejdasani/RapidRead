@@ -8,29 +8,29 @@ body,
 #app {
     margin-top: 5%;
     text-align: center;
-
 }
 
 #title {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 #inputForm {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #rapidWords {
-    margin-top: 120px;
-    font-size: xx-large;
+    margin-top: 65px;
+    font-size: 5.5rem;
+    margin-bottom: 300px;
 }
 
 #wpmLabel {
     margin: 10px;
     margin-top: 25px;
+    font-size: medium;
 }
 
 #startButton {
