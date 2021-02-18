@@ -1,7 +1,8 @@
-// TODO - filterText(), add bootstrap input field (longer)
+// TODO - add bootstrap input field (longer)
 
-let startButton = document.getElementById("startButton")
-let textInput = document.getElementById("textInput")
+var startButton = document.getElementById("startButton")
+var textInput = document.getElementById("textInput")
+var kwikWords = document.getElementById("kwikWords")
 
 var textIndex
 var wordsArray
@@ -20,6 +21,7 @@ startButton.addEventListener("click", function (event) {
     filterText(text)
 })
 
+// This function takes the user inputted string and changes it into an array of words
 function filterText(text) {
     // TODO
     // Add a timer to display the words
@@ -29,13 +31,24 @@ function filterText(text) {
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
+    // Call the displayWords function to show the words inside the kwikWords div
     displayWords(wordsArray)
-
 }
 
+// 
 function displayWords(wordsArray) {
-        // Iterating over all words in the wordsArray array
-        for (let i = 0; i < wordsArray.length; i++) {
-            console.log(wordsArray[i])
-        }
+    // Iterating over all words in the wordsArray array
+    for (let i = 0; i < wordsArray.length; i++) {
+
+        delay(i)
+        // console.log(wordsArray[i])
+        // Wait
+    }
+}
+
+function delay(i) {
+    setTimeout(() => {
+        console.log(wordsArray[i])
+        kwikWords.innerText = wordsArray[i]
+    }, 1000*i);
 }
