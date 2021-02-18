@@ -22,7 +22,6 @@ startButton.addEventListener("click", function (event) {
 
 function filterText(text) {
     // TODO
-    // Separate all words (try CSV for spaces)
     // Add a timer to display the words
     // Research how many words per second to display for 200WPM, 400WPM reading speed etc.
 
@@ -30,23 +29,13 @@ function filterText(text) {
     wordsArray = text.split(" ")
     console.log(wordsArray)
 
-    // Iterating over all words in the wordsArray array
-    for (let i = 0; i < wordsArray.length; i++) {
-        console.log(wordsArray[i])
-    }
+    displayWords(wordsArray)
 
-
-    // for (let i = 0; i < text.length; i++) {
-    //     if (text[i] === " ") {
-    //         console.log("SPACE")
-    //         console.log(text[i])
-    //         wordsArray = text
-    //     } else {
-    //         console.log(text[i])
-    //     }
-    // }
 }
 
 function displayWords(wordsArray) {
-
+        // Iterating over all words in the wordsArray array
+        for (let i = 0; i < wordsArray.length; i++) {
+            console.log(wordsArray[i])
+        }
 }
