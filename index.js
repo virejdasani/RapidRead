@@ -1,7 +1,3 @@
-// TODO
-// Research how many words per second to display for 200WPM, 400WPM reading speed etc.
-
-
 var startButton = document.getElementById("startButton")
 var textInput = document.getElementById("textInput")
 var rapidWords = document.getElementById("rapidWords")
@@ -9,6 +5,7 @@ var wpmInput = document.getElementById("wpmInput")
 
 var textIndex
 var wordsArray
+var tmpWpm
 var wpm
 
 startButton.addEventListener("click", function (event) {
@@ -19,11 +16,35 @@ startButton.addEventListener("click", function (event) {
 
     // Get the value from textInput and save it in text
     let text = textInput.value
-    console.log(text)
+    // console.log(text)
 
     // Get words per minute
-    wpm = wpmInput.value
-    console.log(wpm)
+    tmpWpm = parseInt(wpmInput.value)
+
+// THIS FORMULA IS BROKEN, DO NOT USE
+    // This formula is to get the number of milliseconds gap between 2 words for any amount of words per minute (tmpWpm)
+    // wpm = 1000 + (1000 - ((tmpWpm * 1000)/60))
+    // When wpm becomes negative, add a thousand and make it positive (This is part of the formula)
+    // if (wpm < 0) {
+    //     wpm += 1000
+    //     wpm = wpm *-1
+    // }
+
+    // WPM CONVERSIONS
+    if (tmpWpm === 50) {
+        wpm = 1166.67
+    } else if (tmpWpm === 100) {
+        wpm = 583.33
+    } else if (tmpWpm === 200) {
+        wpm = 291.67
+    } else if (tmpWpm === 300) {
+        wpm = 218.76
+    } else if (tmpWpm === 400) {
+        wpm = 145.84
+    }
+
+    // console.log(tmpWpm, "tmpWpm")
+    console.log(wpm, "ms before each word")
 
     // Filter the text
     filterText(text)
