@@ -6,7 +6,7 @@ body,
 }
 
 #app {
-    margin-top: 5%;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ body,
 #rapidWords {
     margin-top: 65px;
     font-size: 5.5rem;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
 #wpmLabel {
@@ -47,4 +47,10 @@ body,
 
 #startButton:hover {
     background-color: #347c38;
+}
+
+#credits {
+    font-size: medium;
+    text-align: right;
+    margin: 10px;
 }
