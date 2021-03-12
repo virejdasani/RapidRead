@@ -9,11 +9,13 @@
 
 ## Rapid Read is an open source app that helps you read quicker!
 - It can help you read up to 400 words per minute!
+- We can read quicker if we remove the need for our eyes to travel from one word to the next to read.
+Rapid Read does just that!
 
 ### How does it work?
 - First, you paste the text you want to 'Rapid Read' into the textbox at the top
 - Then, you select how many words per minute you want to read it at
-- Lastly, press the start button to start the app displaying every single word at the speed you selected 👍
+- Lastly, press the start button to start the app displaying every word at the speed you selected 👍
 
 ### App info
 - This app is made using Electron and is completely open source
