@@ -5,7 +5,9 @@
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/virejdasani/rapidread/)
 
 
-<img alt="Meeting Assistant" src="https://github.com/virejdasani/RapidRead/blob/master/Assets/rapidReadBannerLogo.png?raw=true" height="200px" />
+<img alt="Rapid Read" src="https://github.com/virejdasani/RapidRead/blob/master/Assets/rapidReadBannerLogo.png?raw=true" height="200px" />
+
+# Download Rapid Read [here](https://github.com/virejdasani/RapidRead/releases)
 
 ## Rapid Read is an open source app that helps you read quicker!
 - It can help you read up to 400 words per minute!
